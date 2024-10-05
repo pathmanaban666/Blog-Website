@@ -20,6 +20,64 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
+@keyframes gradient-animation {
+  0% {
+    background: linear-gradient(43deg, #4158D0, lightsalmon);
+  }
+  25% {
+    background: linear-gradient(43deg, lightsalmon, #FFCC70);
+  }
+  50% {
+    background: linear-gradient(43deg, #FFCC70, #8295f3);
+  }
+  75% {
+    background: linear-gradient(43deg, #8295f3, #FF7F50);
+  }
+  100% {
+    background: linear-gradient(43deg, #FF7F50, #4158D0);
+  }
+}
+
+.animated-background {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  animation: gradient-animation 6s ease infinite alternate;
+  background-size: 200% 200%; 
+}
+
+@keyframes custom-gradient {
+  0% {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+  }
+
+  50% {
+    background: linear-gradient(45deg, #00c6ff, #0072ff); 
+  }
+  100% {
+    background: linear-gradient(45deg, #ff6a00, #ee0979); 
+  }
+}
+
+.animated-bg {
+  animation: custom-gradient 8s ease infinite alternate;
+  background-size: 200%;
+}
+
+@keyframes Anime {
+  0%{width:0ch;}
+  50%{width:66ch;}
+  
+}
+.runningText{
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right:3px solid white;
+  animation:Anime 5s ease-in-out infinite;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
